@@ -14,14 +14,13 @@ class CatalogPage(BasePage):
     
     def search_game(self, query: str):
         """
-        Вводит текст в поисковую строку и нажимает Enter.
+        Вводит текст в поисковую строку и нажимает кнопку "Найти" или Enter.
         
         :param query: название игры для поиска
         """
         self.send_keys(CatalogPageLocators.SEARCH_INPUT, query)
-        # Нажимаем Enter для поиска
-        search_input = self.find_element(CatalogPageLocators.SEARCH_INPUT)
-        search_input.submit()
+        # Клик на кнопку "Найти"
+        self.click(CatalogPageLocators.SEARCH_BUTTON)
         # Даём время на загрузку результатов
         time.sleep(2)
     
@@ -53,3 +52,22 @@ class CatalogPage(BasePage):
         Открывает страницу с информацией об игре.
         """
         self.click(CatalogPageLocators.FIRST_GAME_CARD)
+    
+    def open_first_result_via_details_button(self):
+        """
+        Открывает первую карточку через кнопку "Подробнее" (hover -> click).
+        Альтернативный способ открытия карточки.
+        """
+        # Наводим курсор на первую карточку
+        self.hover(CatalogPageLocators.FIRST_GAME_CARD)
+        time.sleep(0.5)  # Даём время на отображение кнопки "Подробнее"
+        # Кликаем на "Подробнее"
+        self.click(CatalogPageLocators.FIRST_GAME_CARD_DETAILS_BUTTON)
+    
+    def is_no_results_displayed(self) -> bool:
+        """
+        Проверяет, отображается ли сообщение "ничего не найдено".
+        
+        :return: True если сообщение видно, False если нет
+        """
+        return self.is_element_visible(CatalogPageLocators.NO_RESULTS_MESSAGE)
