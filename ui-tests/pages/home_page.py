@@ -23,3 +23,13 @@ class HomePage(BasePage):
         Переходит на страницу каталога PC-игр.
         """
         self.click(HomePageLocators.PC_CATEGORY)
+    
+    def open_game_card_by_title(self, title: str):
+        """
+        Открывает карточку игры на главной странице по названию.
+        
+        :param title: название игры
+        """
+        locator = (By.XPATH, HomePageLocators.GAME_CARD_BY_TITLE.format(title=title))
+        self.scroll_to_bottom()
+        self.click(locator)

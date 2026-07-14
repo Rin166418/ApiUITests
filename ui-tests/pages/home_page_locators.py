@@ -12,3 +12,6 @@ class HomePageLocators:
     
     # Кнопка "PC" в выпадающем меню
     PC_CATEGORY = (By.XPATH, "//a[contains(@class, 'dropdown') and contains(., 'PC')]")
+    
+    # Карточка игры внизу страницы по названию
+    GAME_CARD_BY_TITLE = "//a[contains(., '{title}') or .//h3[contains(., '{title}')]]"

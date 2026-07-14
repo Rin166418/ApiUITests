@@ -7,6 +7,11 @@ from pages.base_page import BasePage
 from pages.catalog_page_locators import CatalogPageLocators
 
 
+class GameNotFoundError(Exception):
+    """Исключение, выбрасываемое когда игра не найдена в списке"""
+    pass
+
+
 class CatalogPage(BasePage):
     """
     Page Object для страницы каталога игр.
@@ -31,6 +36,7 @@ class CatalogPage(BasePage):
         
         :param title: названием игры для поиска
         :return: WebElement — найденная карточка
+        :raises GameNotFoundError: если игра не найдена после прокрутки
         """
         # Создаём динамический локатор для поиска по названию
         locator = (By.XPATH, CatalogPageLocators.GAME_CARD_BY_TITLE.format(title=title))
@@ -44,7 +50,8 @@ class CatalogPage(BasePage):
                 self.scroll_to_bottom()
                 time.sleep(1)
         
-        raise Exception(f"Игра '{title}' не найдена после прокрутки списка")
+        # Если после всех попыток не нашли, выбрасываем понятное исключение
+        raise GameNotFoundError(f"Игра '{title}' не найдена после прокрутки списка (10 попыток)")
     
     def open_first_result(self):
         """
