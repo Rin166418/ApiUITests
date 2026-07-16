@@ -1,76 +1,55 @@
-"""
-GameCardPage — страница карточки/информации об игре
-"""
-import re
+from __future__ import annotations
+from selenium.webdriver.common.by import By
+
 from pages.base_page import BasePage
-from pages.game_card_page_locators import GameCardPageLocators
+
+# Соответствие подписи в системных требованиях -> ключ в словаре результата
+_REQ_LABEL_TO_KEY = {
+    "Операционная система": "os",
+    "Процессор": "cpu",
+    "Оперативная память": "ram",
+    "Видеокарта": "gpu",
+    "Жесткий диск": "storage",
+}
 
 
 class GameCardPage(BasePage):
-    """
-    Page Object для страницы с информацией об игре.
-    """
-    
+    """Page Object для карточки отдельной игры (/catalog/game-pc/{id}/{slug})."""
+
+    PRICE = (
+        By.XPATH,
+        "//span[contains(@class,'rt-Text') and contains(text(),'₽') "
+        "and not(contains(@class,'crossed-price'))]",
+    )
+    MIN_REQUIREMENTS_TITLE = (
+        By.XPATH,
+        "//h4[contains(@class,'SystemRequirements-module-scss-module__NEb1Ga__title') "
+        "and normalize-space(text())='Минимальные']",
+    )
+    REQ_ITEM_CSS = "span[class*='SystemRequirements'][class*='item']"
+
     def get_price(self) -> str:
-        """
-        Получает цену товара.
-        
-        :return: цена в виде строки (например, "699р")
-        """
-        price_text = self.get_text(GameCardPageLocators.PRICE)
-        return price_text.strip()
-    
+        """Возвращает текст цены как есть, например '1 499 ₽'."""
+        return self.get_text(self.PRICE)
+
+    def get_price_rub(self) -> int:
+        """Возвращает цену в виде целого числа рублей."""
+        return self.price_text_to_int(self.get_price())
+
     def get_min_requirements(self) -> dict:
         """
-        Получает минимальные системные требования.
-        
-        :return: словарь с ключами: os, cpu, ram, gpu, storage
+        Возвращает словарь минимальных системных требований:
+        {'os': ..., 'cpu': ..., 'ram': ..., 'gpu': ..., 'storage': ...}
         """
-        requirements = {
-            "os": self._get_requirement_value(GameCardPageLocators.OS_REQUIREMENT),
-            "cpu": self._get_requirement_value(GameCardPageLocators.CPU_REQUIREMENT),
-            "ram": self._get_requirement_value(GameCardPageLocators.RAM_REQUIREMENT),
-            "gpu": self._get_requirement_value(GameCardPageLocators.GPU_REQUIREMENT),
-            "storage": self._get_requirement_value(GameCardPageLocators.STORAGE_REQUIREMENT),
-        }
-        return requirements
-    
-    def _get_requirement_value(self, locator: tuple) -> str:
-        """
-        Вспомогательный метод для получения значения требования.
-        
-        :param locator: локатор требования
-        :return: значение требования
-        """
-        try:
-            return self.get_text(locator).strip()
-        except:
-            return "Not specified"
-    
-    def scroll_to_download_block(self):
-        """
-        Скроллит страницу к блоку "Скачать игру".
-        """
-        self.scroll_to_element(GameCardPageLocators.DOWNLOAD_BLOCK)
-    
-    def get_download_links(self) -> dict:
-        """
-        Получает ссылки для скачивания (Google Play и App Store).
-        
-        :return: словарь с ключами 'google_play' и 'app_store'
-                 значения: URL ссылки или None если нет
-        """
-        download_links = {
-            "google_play": None,
-            "app_store": None,
-        }
-        
-        # Проверяем наличие ссылки на Google Play
-        if self.is_element_visible(GameCardPageLocators.GOOGLE_PLAY_LINK):
-            download_links["google_play"] = self.find_element(GameCardPageLocators.GOOGLE_PLAY_LINK).get_attribute("href")
-        
-        # Проверяем наличие ссылки на App Store
-        if self.is_element_visible(GameCardPageLocators.APP_STORE_LINK):
-            download_links["app_store"] = self.find_element(GameCardPageLocators.APP_STORE_LINK).get_attribute("href")
-        
-        return download_links
+        title_el = self.find(self.MIN_REQUIREMENTS_TITLE)
+        wrapper = title_el.find_element(By.XPATH, "..")
+        items = wrapper.find_elements(By.CSS_SELECTOR, self.REQ_ITEM_CSS)
+
+        result: dict[str, str] = {}
+        for item in items:
+            text = item.text.strip()
+            for label, key in _REQ_LABEL_TO_KEY.items():
+                if label in text and ":" in text:
+                    result[key] = text.split(":", 1)[1].strip()
+                    break
+        return result
