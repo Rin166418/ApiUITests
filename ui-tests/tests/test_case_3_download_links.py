@@ -6,7 +6,7 @@ from pages.home_page import HomePage
 
 
 @allure.epic("igrovoy.rt.ru")
-@allure.feature("Страница игры — блок 'Скачать игру'")
+@allure.feature("Страница игры: блок 'Скачать игру'")
 class TestDownloadLinks:
 
     @allure.title("Позитивный: на странице CarX Drift Racing 2 доступны ссылки Google Play и App Store")

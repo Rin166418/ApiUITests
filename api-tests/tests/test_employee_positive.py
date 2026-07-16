@@ -4,7 +4,7 @@ import pytest
 from utils.data_generator import generate_minimal_valid_employee, generate_valid_employee
 
 @allure.epic("Employee Management API")
-@allure.feature("CRUD сотрудника — позитивные сценарии")
+@allure.feature("CRUD сотрудника: позитивные сценарии")
 class TestEmployeePositive:
 
     @allure.title("Создание сотрудника с полным набором валидных данных")

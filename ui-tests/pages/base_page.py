@@ -16,11 +16,7 @@ from config.config import BASE_URL, DEFAULT_TIMEOUT
 
 
 class BasePage:
-    """
-    Базовый класс для всех Page Object'ов.
-    Содержит переиспользуемые низкоуровневые действия с элементами страницы,
-    чтобы конкретные страницы не дублировали работу с Selenium напрямую.
-    """
+    """Общие действия для страниц сайта."""
 
     def __init__(self, driver: WebDriver):
         self.driver = driver

@@ -47,11 +47,11 @@ allure serve allure-results
 ## Структура проекта
 
 ```
-config/          — конфигурация (BASE_URL, таймауты)
-drivers/         — фабрика Chrome WebDriver
-pages/           — Page Object классы (BasePage + конкретные страницы)
-tests/           — тесты (позитивные и негативные сценарии)
-conftest.py      — фикстура driver, авто-скриншоты в Allure при падении теста
+config/          - адрес сайта и таймауты
+drivers/         - настройка Chrome WebDriver
+pages/           - классы Page Object
+tests/           - тестовые сценарии
+conftest.py      - фикстура браузера и скриншоты при падении
 ```
 
 ## Тестовые сценарии

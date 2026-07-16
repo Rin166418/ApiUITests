@@ -2,8 +2,8 @@
 
 В репозитории находятся два проекта:
 
-- `ui-tests` — UI-тесты сайта `https://igrovoy.rt.ru/`;
-- `api-tests` — тесты сервиса управления сотрудниками.
+- `ui-tests` - UI-тесты сайта `https://igrovoy.rt.ru/`;
+- `api-tests` - тесты сервиса управления сотрудниками.
 
 Тесты написаны на Python с использованием `pytest` и Allure. UI-проект построен по Page Object Model и запускается в Google Chrome.
 

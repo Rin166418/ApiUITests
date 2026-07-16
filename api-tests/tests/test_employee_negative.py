@@ -16,7 +16,7 @@ NON_EXISTENT_ID = 999999999
 
 
 @allure.epic("Employee Management API")
-@allure.feature("CRUD сотрудника — негативные сценарии")
+@allure.feature("CRUD сотрудника: негативные сценарии")
 class TestEmployeeNegative:
 
     @allure.title("Создание сотрудника без обязательного поля name")

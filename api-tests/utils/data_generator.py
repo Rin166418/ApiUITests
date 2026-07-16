@@ -36,7 +36,7 @@ def generate_employee_without_name() -> dict:
 
 
 def generate_employee_with_blank_name() -> dict:
-    """Невалидные данные: name — пустая строка (minLength=1)."""
+    """Невалидные данные: пустая строка в name."""
     return {"name": "", "email": fake.email(), "salary": 50000.0}
 
 

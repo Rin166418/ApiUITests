@@ -5,15 +5,13 @@ from pages.catalog_page import CatalogPage
 from pages.game_card_page import GameCardPage
 from pages.home_page import HomePage
 
-# ВНИМАНИЕ: в исходном задании указана цена 699р. На момент написания теста
-# карточка "PIONER" на сайте стоит 999р (цена меняется динамически, так как
-# это реальный магазин). Вынесено в константу — актуализируйте значение
-# перед прогоном, если цена на сайте снова изменится.
+# В задании указана цена 699р, но сейчас PIONER стоит 999р.
+# Если цена на сайте изменится, нужно обновить значение константы.
 EXPECTED_PIONER_PRICE_RUB = 999
 
 
 @allure.epic("igrovoy.rt.ru")
-@allure.feature("Каталог PC — поиск")
+@allure.feature("Каталог PC: поиск")
 class TestSearchAndPrice:
 
     @allure.title("Позитивный: поиск игры Pioner и проверка цены в карточке")

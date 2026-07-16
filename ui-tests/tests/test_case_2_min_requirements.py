@@ -17,7 +17,7 @@ EXPECTED_MIN_REQUIREMENTS = {
 
 
 @allure.epic("igrovoy.rt.ru")
-@allure.feature("Каталог PC — минимальные системные требования")
+@allure.feature("Каталог PC: минимальные системные требования")
 class TestMinRequirements:
 
     @allure.title("Позитивный: минимальные требования LEGO Batman соответствуют эталону")

@@ -57,19 +57,19 @@ allure open allure-report
 ## Структура
 
 ```
-config/    — базовый URL, таймауты
-clients/   — BaseApiClient (requests + allure attach), EmployeeClient
-models/    — dataclass Employee
-utils/     — генератор валидных/невалидных тестовых данных (faker)
-tests/     — позитивные и негативные тесты
-conftest.py — фикстура api_client, фикстура created_employee_id с авто-teardown
+config/     - базовый URL и таймауты
+clients/    - клиенты для отправки запросов
+models/     - модель Employee
+utils/      - генератор тестовых данных
+tests/      - позитивные и негативные тесты
+conftest.py - фикстуры и удаление созданных сотрудников после теста
 ```
 
 ## Покрытые эндпоинты (по OpenAPI-спецификации сервиса)
 
 | Метод  | Путь                     | Позитив | Негатив                                  |
 |--------|--------------------------|---------|-------------------------------------------|
-| GET    | /api/employees           | ✅      | —                                          |
+| GET    | /api/employees           | ✅      | нет                                        |
 | POST   | /api/employees           | ✅      | без name, пустой name, name>100, salary<=0, salary не число, email>100 |
 | GET    | /api/employees/{id}      | ✅      | несуществующий id, нечисловой id           |
 | PUT    | /api/employees/{id}      | ✅      | несуществующий id                          |
