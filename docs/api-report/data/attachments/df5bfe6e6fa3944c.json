@@ -1,0 +1,21 @@
+{
+  "status_code": 200,
+  "body": {
+    "id": 20,
+    "name": "Фомина Маргарита Болеславовна",
+    "email": "mstislav87@example.org",
+    "position": "Мясник",
+    "department": "подземный",
+    "company": "Мишин и партнеры",
+    "salary": 497821.27,
+    "createdAt": "2026-07-16T11:59:25.891892",
+    "updatedAt": "2026-07-16T11:59:25.891906"
+  },
+  "headers": {
+    "Content-Type": "application/json",
+    "Transfer-Encoding": "chunked",
+    "Date": "Thu, 16 Jul 2026 11:59:25 GMT",
+    "Keep-Alive": "timeout=60",
+    "Connection": "keep-alive"
+  }
+}

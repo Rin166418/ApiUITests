@@ -1,0 +1,12 @@
+{
+  "method": "POST",
+  "url": "http://localhost:8080/api/employees",
+  "body": {
+    "name": "Аксенов Демид Марсович",
+    "email": "uljan1982@example.net",
+    "position": "Балетмейстер",
+    "department": "роса",
+    "company": "ЗАО «Красильникова»",
+    "salary": 210400.35
+  }
+}

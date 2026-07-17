@@ -1,0 +1,8 @@
+{
+  "method": "POST",
+  "url": "http://localhost:8080/api/employees",
+  "body": {
+    "name": "Максимова Агата Юрьевна",
+    "salary": "not-a-number"
+  }
+}

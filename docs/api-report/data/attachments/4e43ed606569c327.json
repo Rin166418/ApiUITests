@@ -1,0 +1,12 @@
+{
+  "method": "POST",
+  "url": "http://localhost:8080/api/employees",
+  "body": {
+    "name": "Мясников Тимофей Фадеевич",
+    "email": "fguljaev@example.org",
+    "position": "Неонатолог",
+    "department": "трясти",
+    "company": "НПО «Беляев Кузьмин»",
+    "salary": 63356.66
+  }
+}

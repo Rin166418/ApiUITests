@@ -1,0 +1,8 @@
+{
+  "method": "PATCH",
+  "url": "http://localhost:8080/api/employees/23",
+  "body": {
+    "name": "Милен Евстигнеевич Казаков",
+    "position": "Senior QA Automation Engineer"
+  }
+}

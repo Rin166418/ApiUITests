@@ -1,0 +1,15 @@
+{
+  "status_code": 400,
+  "body": {
+    "status": 400,
+    "error": "Bad Request",
+    "message": "Ошибка валидации",
+    "timestamp": "2026-07-16T11:59:25.730570501"
+  },
+  "headers": {
+    "Content-Type": "application/json",
+    "Transfer-Encoding": "chunked",
+    "Date": "Thu, 16 Jul 2026 11:59:25 GMT",
+    "Connection": "close"
+  }
+}

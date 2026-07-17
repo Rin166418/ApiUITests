@@ -1,0 +1,12 @@
+{
+  "method": "POST",
+  "url": "http://localhost:8080/api/employees",
+  "body": {
+    "name": "Кузьма Андреевич Шашков",
+    "email": "molchanovgeorgi@example.com",
+    "position": "Ортодонт",
+    "department": "пастух",
+    "company": "Филатова Групп",
+    "salary": 184548.4
+  }
+}

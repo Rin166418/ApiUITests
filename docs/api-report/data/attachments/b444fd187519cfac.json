@@ -1,0 +1,8 @@
+{
+  "method": "POST",
+  "url": "http://localhost:8080/api/employees",
+  "body": {
+    "name": "Бобров Леон Венедиктович",
+    "salary": 1.0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "status_code": 201,
+  "body": {
+    "id": 17,
+    "name": "Кузьма Андреевич Шашков",
+    "email": "molchanovgeorgi@example.com",
+    "position": "Ортодонт",
+    "department": "пастух",
+    "company": "Филатова Групп",
+    "salary": 184548.4,
+    "createdAt": "2026-07-16T11:59:25.821151",
+    "updatedAt": "2026-07-16T11:59:25.821192"
+  },
+  "headers": {
+    "Content-Type": "application/json",
+    "Transfer-Encoding": "chunked",
+    "Date": "Thu, 16 Jul 2026 11:59:25 GMT",
+    "Keep-Alive": "timeout=60",
+    "Connection": "keep-alive"
+  }
+}

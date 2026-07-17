@@ -1,0 +1,12 @@
+{
+  "method": "POST",
+  "url": "http://localhost:8080/api/employees",
+  "body": {
+    "name": "Гордей Захарьевич Зыков",
+    "email": "timofemaksimov@example.org",
+    "position": "Кредитный консультант",
+    "department": "деньги",
+    "company": "Кононова Инк",
+    "salary": 321060.94
+  }
+}

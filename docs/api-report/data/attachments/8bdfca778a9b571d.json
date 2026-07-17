@@ -1,0 +1,12 @@
+{
+  "method": "POST",
+  "url": "http://localhost:8080/api/employees",
+  "body": {
+    "name": "Тимофеева Анастасия Александровна",
+    "email": "tvorimirfilippov@example.net",
+    "position": "Кинодраматург",
+    "department": "чувство",
+    "company": "НПО «Орехова, Орлова и Зуева»",
+    "salary": 114756.52
+  }
+}

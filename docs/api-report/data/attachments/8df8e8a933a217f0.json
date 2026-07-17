@@ -1,0 +1,12 @@
+{
+  "method": "POST",
+  "url": "http://localhost:8080/api/employees",
+  "body": {
+    "name": "Милен Евстигнеевич Казаков",
+    "email": "anekrasov@example.net",
+    "position": "Каптенармус",
+    "department": "запеть",
+    "company": "Кузнецов Лтд",
+    "salary": 185558.5
+  }
+}

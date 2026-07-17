@@ -1,0 +1,9 @@
+{
+  "method": "POST",
+  "url": "http://localhost:8080/api/employees",
+  "body": {
+    "name": "",
+    "email": "smirnovfeliks@example.net",
+    "salary": 50000.0
+  }
+}

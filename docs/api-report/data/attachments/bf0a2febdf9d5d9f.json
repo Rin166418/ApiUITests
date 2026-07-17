@@ -1,0 +1,12 @@
+{
+  "method": "PUT",
+  "url": "http://localhost:8080/api/employees/999999999",
+  "body": {
+    "name": "Котов Михей Валерьянович",
+    "email": "lora_2011@example.org",
+    "position": "Миколог",
+    "department": "совещание",
+    "company": "ОАО «Степанов Казаков»",
+    "salary": 51127.68
+  }
+}

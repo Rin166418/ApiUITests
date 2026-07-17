@@ -1,0 +1,12 @@
+{
+  "method": "POST",
+  "url": "http://localhost:8080/api/employees",
+  "body": {
+    "name": "Фомина Маргарита Болеславовна",
+    "email": "mstislav87@example.org",
+    "position": "Мясник",
+    "department": "подземный",
+    "company": "Мишин и партнеры",
+    "salary": 497821.27
+  }
+}

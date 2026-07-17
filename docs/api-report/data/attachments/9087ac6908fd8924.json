@@ -1,0 +1,21 @@
+{
+  "status_code": 200,
+  "body": {
+    "id": 22,
+    "name": "Колесников Ипатий Власович",
+    "email": "ugureva@example.net",
+    "position": "Специалист по стрижке овец",
+    "department": "социалистический",
+    "company": "ОАО «Белякова Колесникова»",
+    "salary": 83641.87,
+    "createdAt": "2026-07-16T11:59:25.931975",
+    "updatedAt": "2026-07-16T11:59:25.931995"
+  },
+  "headers": {
+    "Content-Type": "application/json",
+    "Transfer-Encoding": "chunked",
+    "Date": "Thu, 16 Jul 2026 11:59:25 GMT",
+    "Keep-Alive": "timeout=60",
+    "Connection": "keep-alive"
+  }
+}

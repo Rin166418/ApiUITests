@@ -1,0 +1,21 @@
+{
+  "status_code": 201,
+  "body": {
+    "id": 21,
+    "name": "Аксенов Демид Марсович",
+    "email": "uljan1982@example.net",
+    "position": "Балетмейстер",
+    "department": "роса",
+    "company": "ЗАО «Красильникова»",
+    "salary": 210400.35,
+    "createdAt": "2026-07-16T11:59:25.90929",
+    "updatedAt": "2026-07-16T11:59:25.909306"
+  },
+  "headers": {
+    "Content-Type": "application/json",
+    "Transfer-Encoding": "chunked",
+    "Date": "Thu, 16 Jul 2026 11:59:25 GMT",
+    "Keep-Alive": "timeout=60",
+    "Connection": "keep-alive"
+  }
+}

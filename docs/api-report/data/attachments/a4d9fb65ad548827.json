@@ -1,0 +1,9 @@
+{
+  "status_code": 204,
+  "body": "",
+  "headers": {
+    "Date": "Thu, 16 Jul 2026 11:59:25 GMT",
+    "Keep-Alive": "timeout=60",
+    "Connection": "keep-alive"
+  }
+}

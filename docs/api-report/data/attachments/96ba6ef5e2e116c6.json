@@ -1,0 +1,21 @@
+{
+  "status_code": 201,
+  "body": {
+    "id": 23,
+    "name": "Милен Евстигнеевич Казаков",
+    "email": "anekrasov@example.net",
+    "position": "Каптенармус",
+    "department": "запеть",
+    "company": "Кузнецов Лтд",
+    "salary": 185558.5,
+    "createdAt": "2026-07-16T11:59:25.962431",
+    "updatedAt": "2026-07-16T11:59:25.962443"
+  },
+  "headers": {
+    "Content-Type": "application/json",
+    "Transfer-Encoding": "chunked",
+    "Date": "Thu, 16 Jul 2026 11:59:25 GMT",
+    "Keep-Alive": "timeout=60",
+    "Connection": "keep-alive"
+  }
+}

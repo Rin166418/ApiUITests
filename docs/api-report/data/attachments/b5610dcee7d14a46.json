@@ -1,0 +1,21 @@
+{
+  "status_code": 201,
+  "body": {
+    "id": 19,
+    "name": "Бобров Леон Венедиктович",
+    "email": null,
+    "position": null,
+    "department": null,
+    "company": null,
+    "salary": 1.0,
+    "createdAt": "2026-07-16T11:59:25.876636",
+    "updatedAt": "2026-07-16T11:59:25.876651"
+  },
+  "headers": {
+    "Content-Type": "application/json",
+    "Transfer-Encoding": "chunked",
+    "Date": "Thu, 16 Jul 2026 11:59:25 GMT",
+    "Keep-Alive": "timeout=60",
+    "Connection": "keep-alive"
+  }
+}

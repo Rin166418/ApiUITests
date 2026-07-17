@@ -1,0 +1,12 @@
+{
+  "method": "PUT",
+  "url": "http://localhost:8080/api/employees/22",
+  "body": {
+    "name": "Колесников Ипатий Власович",
+    "email": "ugureva@example.net",
+    "position": "Специалист по стрижке овец",
+    "department": "социалистический",
+    "company": "ОАО «Белякова Колесникова»",
+    "salary": 83641.87
+  }
+}

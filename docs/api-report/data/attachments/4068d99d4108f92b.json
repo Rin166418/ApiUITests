@@ -1,0 +1,8 @@
+{
+  "method": "PATCH",
+  "url": "http://localhost:8080/api/employees/999999999",
+  "body": {
+    "name": "Несуществующий сотрудник",
+    "position": "QA"
+  }
+}

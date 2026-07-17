@@ -1,0 +1,21 @@
+{
+  "status_code": 201,
+  "body": {
+    "id": 18,
+    "name": "Тимофеева Анастасия Александровна",
+    "email": "tvorimirfilippov@example.net",
+    "position": "Кинодраматург",
+    "department": "чувство",
+    "company": "НПО «Орехова, Орлова и Зуева»",
+    "salary": 114756.52,
+    "createdAt": "2026-07-16T11:59:25.860359",
+    "updatedAt": "2026-07-16T11:59:25.86038"
+  },
+  "headers": {
+    "Content-Type": "application/json",
+    "Transfer-Encoding": "chunked",
+    "Date": "Thu, 16 Jul 2026 11:59:25 GMT",
+    "Keep-Alive": "timeout=60",
+    "Connection": "keep-alive"
+  }
+}

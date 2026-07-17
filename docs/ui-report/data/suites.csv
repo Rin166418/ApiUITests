@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","20015","Негативный: поиск несуществующей игры в списке без использования поиска","tests","2026-07-16","passed","2026-07-16","TestMinRequirements","test_case_2_min_requirements","",""
+"","6204","Позитивный: минимальные требования LEGO Batman соответствуют эталону","tests","2026-07-16","passed","2026-07-16","TestMinRequirements","test_case_2_min_requirements","",""
+"","6616","Негативный: поиск по несуществующей игре","tests","2026-07-16","passed","2026-07-16","TestSearchAndPrice","test_case_1_search_price","",""
+"","4578","Позитивный: поиск игры Pioner и проверка цены в карточке","tests","2026-07-16","passed","2026-07-16","TestSearchAndPrice","test_case_1_search_price","",""
+"","5643","Позитивный: на странице CarX Drift Racing 2 доступны ссылки Google Play и App Store","tests","2026-07-16","passed","2026-07-16","TestDownloadLinks","test_case_3_download_links","",""

@@ -1,0 +1,21 @@
+{
+  "status_code": 201,
+  "body": {
+    "id": 22,
+    "name": "Мясников Тимофей Фадеевич",
+    "email": "fguljaev@example.org",
+    "position": "Неонатолог",
+    "department": "трясти",
+    "company": "НПО «Беляев Кузьмин»",
+    "salary": 63356.66,
+    "createdAt": "2026-07-16T11:59:25.931975",
+    "updatedAt": "2026-07-16T11:59:25.931995"
+  },
+  "headers": {
+    "Content-Type": "application/json",
+    "Transfer-Encoding": "chunked",
+    "Date": "Thu, 16 Jul 2026 11:59:25 GMT",
+    "Keep-Alive": "timeout=60",
+    "Connection": "keep-alive"
+  }
+}

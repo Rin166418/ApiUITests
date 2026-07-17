@@ -1,0 +1,21 @@
+{
+  "status_code": 201,
+  "body": {
+    "id": 24,
+    "name": "Гордей Захарьевич Зыков",
+    "email": "timofemaksimov@example.org",
+    "position": "Кредитный консультант",
+    "department": "деньги",
+    "company": "Кононова Инк",
+    "salary": 321060.94,
+    "createdAt": "2026-07-16T11:59:25.978402",
+    "updatedAt": "2026-07-16T11:59:25.978415"
+  },
+  "headers": {
+    "Content-Type": "application/json",
+    "Transfer-Encoding": "chunked",
+    "Date": "Thu, 16 Jul 2026 11:59:25 GMT",
+    "Keep-Alive": "timeout=60",
+    "Connection": "keep-alive"
+  }
+}
